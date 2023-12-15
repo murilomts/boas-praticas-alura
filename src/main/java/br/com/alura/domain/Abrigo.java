@@ -2,6 +2,8 @@ package br.com.alura.domain;
 
 import lombok.*;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @NoArgsConstructor
 public class Abrigo {
@@ -23,5 +25,9 @@ public class Abrigo {
     @Setter
     @NonNull
     private String email;
+
+    @Getter
+    @Setter
+    private List<Pet> pets;
 
 }

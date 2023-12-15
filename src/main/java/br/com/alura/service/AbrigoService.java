@@ -44,8 +44,8 @@ public class AbrigoService {
     public void listarAbrigos() throws IOException, InterruptedException {
         String uri = "http://localhost:8080/abrigos";
         HttpResponse<String> response = client.dispararRequisicaoGet(uri);
-
         String responseBody = response.body();
+
         Abrigo[] abrigos = new ObjectMapper().readValue(responseBody, Abrigo[].class);
         List<Abrigo> abrigoList = Arrays.stream(abrigos).toList();
         System.out.println("Abrigos cadastrados:");
