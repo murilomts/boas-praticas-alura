@@ -9,6 +9,7 @@ import java.util.List;
 public class Abrigo {
 
     @Getter
+    @Setter
     private Long id;
 
     @Getter
@@ -29,5 +30,13 @@ public class Abrigo {
     @Getter
     @Setter
     private List<Pet> pets;
+
+    @Override
+    public String toString() {
+        return """
+                     "id":%s,"nome":"%s","telefone":"%s","email":"%s"
+                     """.formatted(this.id, this.nome, this.telefone, this.email);
+    }
+
 
 }
